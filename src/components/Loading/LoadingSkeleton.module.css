@@ -1,0 +1,1 @@
+.wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.skeleton{height:120px;border-radius:14px;background:linear-gradient(90deg,#f1f5f9,#fff,#f1f5f9);background-size:200% 100%;animation:pulse 1s infinite}@keyframes pulse{to{background-position:-200% 0}}@media(max-width:900px){.wrap{grid-template-columns:1fr 1fr}}@media(max-width:560px){.wrap{grid-template-columns:1fr}}

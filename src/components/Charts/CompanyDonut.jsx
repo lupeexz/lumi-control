@@ -1,0 +1,3 @@
+import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts';
+import styles from './Charts.module.css';
+export default function CompanyDonut({data}){return <div className={`panel ${styles.donutBox}`}><h3>Consumo por Empresa</h3><div className={styles.donutGrid}><ResponsiveContainer width="100%" height={210}><PieChart><Pie data={data} dataKey="value" innerRadius={62} outerRadius={98} paddingAngle={2}>{data.map(d=><Cell key={d.name} fill={d.color}/>)}</Pie></PieChart></ResponsiveContainer><ul>{data.map(d=><li key={d.name}><span style={{background:d.color}}></span><p>{d.name}</p><strong>{d.value}%</strong></li>)}</ul></div></div>}

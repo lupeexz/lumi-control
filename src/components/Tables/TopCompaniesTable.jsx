@@ -1,0 +1,3 @@
+import styles from './Tables.module.css';
+const money=n=>n.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+export default function TopCompaniesTable({companies}){return <div className={`panel ${styles.tableBox}`}><h3>Top Empresas por Consumo</h3><div className={styles.scroll}><table><thead><tr><th>Empresa</th><th>Consumo (kWh)</th><th>Custo (R$)</th><th>Economia (%)</th></tr></thead><tbody>{companies.map(c=><tr key={c.id}><td>{c.name}</td><td>{c.averageConsumption.toLocaleString('pt-BR')}</td><td>{money(c.cost)}</td><td className={styles.green}>{c.economy}%</td></tr>)}</tbody></table></div></div>}
